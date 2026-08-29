@@ -27,29 +27,41 @@ import {
 const STORAGE_GAMES_KEY = 'unblocked_vault_games_v1';
 const STORAGE_FAVORITES_KEY = 'unblocked_vault_favorites_v1';
 
+const getInitialGames = () => {
+  let fallback = [];
+  if (Array.isArray(defaultGamesData)) {
+    fallback = defaultGamesData;
+  } else if (defaultGamesData && Array.isArray(defaultGamesData.default)) {
+    fallback = defaultGamesData.default;
+  }
+
+  try {
+    const saved = localStorage.getItem(STORAGE_GAMES_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to parse saved games:', e);
+  }
+  return fallback;
+};
+
 export default function App() {
   // Load games from localStorage or default JSON
-  const [games, setGames] = useState(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_GAMES_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
-        }
-      }
-    } catch (e) {
-      console.warn('Failed to parse saved games:', e);
-    }
-    return defaultGamesData;
-  });
+  const [games, setGames] = useState(getInitialGames);
 
   // Load favorites
   const [favorites, setFavorites] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_FAVORITES_KEY);
       if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          return parsed;
+        }
       }
     } catch (e) {
       console.warn('Failed to parse favorites:', e);
@@ -134,22 +146,29 @@ export default function App() {
 
   // Compute category counts
   const categoryCounts = useMemo(() => {
-    const counts = { All: games.length };
-    games.forEach((game) => {
-      counts[game.category] = (counts[game.category] || 0) + 1;
-    });
+    const counts = { All: Array.isArray(games) ? games.length : 0 };
+    if (Array.isArray(games)) {
+      games.forEach((game) => {
+        if (game && game.category) {
+          counts[game.category] = (counts[game.category] || 0) + 1;
+        }
+      });
+    }
     return counts;
   }, [games]);
 
   // Total play count
   const totalPlays = useMemo(() => {
-    return games.reduce((acc, g) => acc + (g.plays || 0), 0);
+    if (!Array.isArray(games)) return 0;
+    return games.reduce((acc, g) => acc + (Number(g?.plays) || 0), 0);
   }, [games]);
 
   // Filter & Sort games
   const filteredGames = useMemo(() => {
+    if (!Array.isArray(games)) return [];
     return games
       .filter((game) => {
+        if (!game) return false;
         // Favorites filter
         if (showFavoritesOnly && !favorites.includes(game.id)) {
           return false;
@@ -167,7 +186,7 @@ export default function App() {
           const matchDesc = (game.description || '').toLowerCase().includes(query);
           const matchCategory = (game.category || '').toLowerCase().includes(query);
           const matchTags = Array.isArray(game.tags)
-            ? game.tags.some((t) => t.toLowerCase().includes(query))
+            ? game.tags.some((t) => (t || '').toLowerCase().includes(query))
             : false;
           return matchTitle || matchDesc || matchCategory || matchTags;
         }
@@ -177,13 +196,13 @@ export default function App() {
       .sort((a, b) => {
         switch (sortOption) {
           case 'popular':
-            return (b.plays || 0) - (a.plays || 0);
+            return (Number(b?.plays) || 0) - (Number(a?.plays) || 0);
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0);
+            return (Number(b?.rating) || 0) - (Number(a?.rating) || 0);
           case 'newest':
-            return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+            return (b?.featured ? 1 : 0) - (a?.featured ? 1 : 0);
           case 'alphabetical':
-            return (a.title || '').localeCompare(b.title || '');
+            return (a?.title || '').localeCompare(b?.title || '');
           default:
             return 0;
         }
@@ -192,7 +211,8 @@ export default function App() {
 
   // Spotlight featured game
   const spotlightGame = useMemo(() => {
-    return games.find((g) => g.featured) || games[0];
+    if (!Array.isArray(games) || games.length === 0) return null;
+    return games.find((g) => g?.featured) || games[0] || null;
   }, [games]);
 
   // Secondary featured games
