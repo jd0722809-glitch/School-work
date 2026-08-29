@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { EMBEDDED_GAMES } from '../data/embeddedGames';
+import { EMBEDDED_GAMES } from '../data/embeddedGames.js';
 import {
   ArrowLeft,
   Maximize,
@@ -341,7 +341,7 @@ export function GamePlayer({
                       {relGame.title}
                     </h4>
                     <span className="text-[10px] text-slate-400 font-mono">
-                      {relGame.category} • ⭐ {relGame.rating.toFixed(1)}
+                      {relGame.category} • ⭐ {typeof relGame.rating === 'number' ? relGame.rating.toFixed(1) : '4.8'}
                     </span>
                   </div>
                 </div>

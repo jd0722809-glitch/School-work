@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import defaultGamesData from './data/games.json';
-import { Header } from './components/Header';
-import { CategoryBar } from './components/CategoryBar';
-import { GameCard } from './components/GameCard';
-import { GamePlayer } from './components/GamePlayer';
-import { AddGameModal } from './components/AddGameModal';
-import { JsonManagerModal } from './components/JsonManagerModal';
-import { DisguiseModal } from './components/DisguiseModal';
+import { Header } from './components/Header.jsx';
+import { CategoryBar } from './components/CategoryBar.jsx';
+import { GameCard } from './components/GameCard.jsx';
+import { GamePlayer } from './components/GamePlayer.jsx';
+import { AddGameModal } from './components/AddGameModal.jsx';
+import { JsonManagerModal } from './components/JsonManagerModal.jsx';
+import { DisguiseModal } from './components/DisguiseModal.jsx';
 import {
   Gamepad2,
   Sparkles,
@@ -272,7 +272,7 @@ export default function App() {
                         <span>Play Now</span>
                       </div>
                       <span className="text-xs text-slate-400 font-mono">
-                        ⭐ {spotlightGame.rating.toFixed(1)} • {(spotlightGame.plays || 0).toLocaleString()} plays
+                        ⭐ {typeof spotlightGame.rating === 'number' ? spotlightGame.rating.toFixed(1) : '4.8'} • {(spotlightGame.plays || 0).toLocaleString()} plays
                       </span>
                     </div>
                   </div>
