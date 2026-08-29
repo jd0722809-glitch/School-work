@@ -1,0 +1,222 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "description": "Join the numbers and get to the 2048 tile! A legendary tile-matching numerical puzzle.",
+    "instructions": "Use Arrow Keys or Swipe to slide numbered tiles. When two tiles with the same number touch, they merge into one!",
+    "iframeUrl": "https://play2048.co/",
+    "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#edc22e",
+    "tags": ["puzzle", "numbers", "brain", "classic", "popular"],
+    "rating": 4.9,
+    "featured": true,
+    "plays": 14250,
+    "controls": {
+      "Arrow Keys / WASD": "Move tiles",
+      "R": "Restart game"
+    }
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "category": "Arcade",
+    "description": "Fast-paced hexagonal puzzle game inspired by Tetris! Rotate the hexagon to match falling colored bars.",
+    "instructions": "Rotate the central hexagon to catch falling colored blocks. Connect 3 or more blocks of the same color to clear them.",
+    "iframeUrl": "https://hextris.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#e74c3c",
+    "tags": ["arcade", "geometry", "puzzle", "fast", "colors"],
+    "rating": 4.8,
+    "featured": true,
+    "plays": 12890,
+    "controls": {
+      "Left / Right Arrow": "Rotate hexagon",
+      "A / D": "Rotate hexagon",
+      "Down Arrow": "Speed up block"
+    }
+  },
+  {
+    "id": "chrome-dino",
+    "title": "T-Rex Dino Runner",
+    "category": "Arcade",
+    "description": "The iconic offline dinosaur runner! Leap over cacti and dodge pterodactyls in an endless desert trek.",
+    "instructions": "Press Space or Up Arrow to jump over obstacles. Press Down Arrow to duck under flying creatures.",
+    "iframeUrl": "https://offline-dino-game.firebaseapp.com/",
+    "thumbnail": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#535353",
+    "tags": ["runner", "retro", "dinosaur", "endless", "pixel"],
+    "rating": 4.9,
+    "featured": true,
+    "plays": 18400,
+    "controls": {
+      "Spacebar / Up Arrow": "Jump",
+      "Down Arrow": "Crouch / Duck"
+    }
+  },
+  {
+    "id": "clumsy-bird",
+    "title": "Clumsy Flap Bird",
+    "category": "Action",
+    "description": "Guide the cute bird through tricky pipe obstacles without touching the edges.",
+    "instructions": "Click or tap Spacebar to flap wings and gain height. Time your flaps precisely between green pipe gaps.",
+    "iframeUrl": "https://ellisonleao.github.io/clumsy-bird/",
+    "thumbnail": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#2ecc71",
+    "tags": ["arcade", "bird", "flappy", "reflex", "challenging"],
+    "rating": 4.7,
+    "featured": true,
+    "plays": 9780,
+    "controls": {
+      "Spacebar / Click": "Flap wings",
+      "Touch Screen": "Tap to flap"
+    }
+  },
+  {
+    "id": "snake-retro",
+    "title": "Retro Snake",
+    "category": "Classic",
+    "description": "Classic 90s Snake game! Slither around eating apples and growing longer without colliding into walls or your tail.",
+    "instructions": "Eat food to grow your snake and increase score. Avoid colliding with border walls and yourself.",
+    "iframeUrl": "https://patorjk.com/games/snake/",
+    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#27ae60",
+    "tags": ["snake", "retro", "classic", "arcade", "nokia"],
+    "rating": 4.8,
+    "featured": false,
+    "plays": 11200,
+    "controls": {
+      "Arrow Keys / WASD": "Change direction",
+      "P": "Pause game"
+    }
+  },
+  {
+    "id": "tower-stack",
+    "title": "Tower Blocks",
+    "category": "Arcade",
+    "description": "Stack moving blocks as high as you can! Precision timing rewards you with bonus combos.",
+    "instructions": "Click or press Spacebar when the floating block aligns perfectly with the stack below.",
+    "iframeUrl": "https://iamkun.github.io/tower_game/",
+    "thumbnail": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#3498db",
+    "tags": ["stack", "timing", "skyscraper", "3d", "arcade"],
+    "rating": 4.6,
+    "featured": false,
+    "plays": 8450,
+    "controls": {
+      "Space / Click": "Drop current block",
+      "Restart": "Tap screen after game over"
+    }
+  },
+  {
+    "id": "emoji-minesweeper",
+    "title": "Emoji Minesweeper",
+    "category": "Puzzle",
+    "description": "A vibrant emoji twist on the timeless logic game. Uncover clear tiles and flag hidden mines.",
+    "instructions": "Click a tile to reveal numbers indicating adjacent mines. Right click or long press to plant a flag.",
+    "iframeUrl": "https://muan.github.io/emoji-minesweeper/",
+    "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#f39c12",
+    "tags": ["puzzle", "minesweeper", "logic", "emoji", "strategy"],
+    "rating": 4.7,
+    "featured": false,
+    "plays": 7650,
+    "controls": {
+      "Left Click": "Reveal square",
+      "Right Click / Alt+Click": "Place flag"
+    }
+  },
+  {
+    "id": "pacman-html5",
+    "title": "Pac-Man Retro",
+    "category": "Arcade",
+    "description": "Navigate the iconic maze, gobble dots, and avoid Blinky, Pinky, Inky, and Clyde!",
+    "instructions": "Eat all yellow dots to advance. Eat large Power Pellets to turn ghosts blue and temporarily gobble them.",
+    "iframeUrl": "https://pacman.platzh1rsch.ch/",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#f1c40f",
+    "tags": ["arcade", "pacman", "ghosts", "retro", "80s"],
+    "rating": 4.9,
+    "featured": true,
+    "plays": 16900,
+    "controls": {
+      "Arrow Keys / WASD": "Move Pac-Man",
+      "N": "New game",
+      "P": "Pause"
+    }
+  },
+  {
+    "id": "pong-classic",
+    "title": "Retro Pong",
+    "category": "Sports",
+    "description": "The grandfather of video games! Defeat the computer paddle in high-speed table tennis rally.",
+    "instructions": "Move your paddle vertically to bounce the ball back into the opponent's court and score points.",
+    "iframeUrl": "https://pong-2.com/",
+    "thumbnail": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#9b59b6",
+    "tags": ["sports", "pong", "retro", "table tennis", "arcade"],
+    "rating": 4.5,
+    "featured": false,
+    "plays": 5890,
+    "controls": {
+      "Up / Down Arrow": "Move paddle",
+      "W / S": "Move paddle",
+      "Mouse Move": "Track cursor"
+    }
+  },
+  {
+    "id": "solitaire-classic",
+    "title": "Klondike Solitaire",
+    "category": "Classic",
+    "description": "The quintessential card game. Stack 4 foundation piles from Ace to King by suit.",
+    "instructions": "Build tableau columns downward in alternating colors (red/black). Place cards into 4 suit foundations starting with Ace.",
+    "iframeUrl": "https://online-solitaire.com/",
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#1abc9c",
+    "tags": ["cards", "solitaire", "klondike", "classic", "relaxing"],
+    "rating": 4.8,
+    "featured": false,
+    "plays": 9430,
+    "controls": {
+      "Drag & Drop": "Move cards",
+      "Double Click": "Send card to foundation"
+    }
+  },
+  {
+    "id": "space-invaders",
+    "title": "Alien Space Invaders",
+    "category": "Action",
+    "description": "Defend planet Earth from descending waves of pixel alien invaders and dodging enemy lasers.",
+    "instructions": "Move your laser cannon left and right, firing lasers at approaching alien formations before they reach bottom.",
+    "iframeUrl": "https://freeinvaders.org/",
+    "thumbnail": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#e67e22",
+    "tags": ["space", "arcade", "shooter", "aliens", "retro"],
+    "rating": 4.6,
+    "featured": false,
+    "plays": 8100,
+    "controls": {
+      "Left / Right Arrow": "Move spaceship",
+      "Spacebar": "Fire laser"
+    }
+  },
+  {
+    "id": "sudoku-web",
+    "title": "Master Sudoku",
+    "category": "Strategy",
+    "description": "Engage your mind with classic 9x9 grid Japanese number puzzles across multiple difficulty tiers.",
+    "instructions": "Fill each 9x9 grid so every row, column, and 3x3 region contains numbers 1 through 9 with no duplicates.",
+    "iframeUrl": "https://sudoku.com/",
+    "thumbnail": "https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=600&auto=format&fit=crop&q=80",
+    "accentColor": "#34495e",
+    "tags": ["numbers", "logic", "sudoku", "strategy", "brain"],
+    "rating": 4.7,
+    "featured": false,
+    "plays": 6920,
+    "controls": {
+      "Click Cell": "Select slot",
+      "1-9 Keys": "Enter digit",
+      "Backspace / Del": "Erase number"
+    }
+  }
+]

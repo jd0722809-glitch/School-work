@@ -1,0 +1,6 @@
+{
+  "name": "Unblocked Games Vault",
+  "description": "A responsive unblocked games portal featuring playable web games stored and loaded via JSON iframes.",
+  "requestFramePermissions": ["fullscreen"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
